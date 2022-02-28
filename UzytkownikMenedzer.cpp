@@ -44,7 +44,6 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
             return true;
         }
     }
-
     return false;
 }
 
@@ -54,6 +53,10 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
         cout << uzytkownicy[i].pobierzLogin() << endl;
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
+}
+
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
+    plikZUzytkownikami.wczytajUzytkownikowZPliku(uzytkownicy);
 }
 
 
