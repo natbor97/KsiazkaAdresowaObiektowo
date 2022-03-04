@@ -10,9 +10,15 @@ class KsiazkaAdresowa {
     UzytkownikMenedzer uzytkownikMenedzer;
 
 public:
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami)
+    : uzytkownikMenedzer(nazwaPlikuZUzytkownikami){};
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    int pobierzIdZalogowanegoUzytkownika();
+    void logowanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
+
 };
 
 #endif
