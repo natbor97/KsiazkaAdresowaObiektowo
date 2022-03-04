@@ -20,12 +20,18 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 }
 
 bool PlikZUzytkownikami::czyPlikJestPusty() {
-    fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
+   fstream plikTekstowy;
+    bool pusty=true;
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
+
+    if (plikTekstowy.good() == true) {
+        plikTekstowy.seekg(0, ios::end);
+        if (plikTekstowy.tellg() != 0)
+            pusty = false;
+    }
+
+    plikTekstowy.close();
+    return pusty;
 }
 
 string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) {
@@ -96,7 +102,6 @@ void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik>
             else {
                 plikTekstowy << liniaZDanymiUzytkownika << endl;
             }
-
             liniaZDanymiUzytkownika = "";
         }
     }
