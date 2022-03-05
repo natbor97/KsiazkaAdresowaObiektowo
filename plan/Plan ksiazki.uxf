@@ -13,7 +13,7 @@
 --
 -uzytkownikMenedzer:UzytkownikMenedzer
 -adresatMenedzer:AdresatMenedzer
--NAZWAPLIKUZADRESATAMI: const String
+-NAZWA_PLIKU_Z_ADRESATAMI: String
 --
 KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
 +rejestracjaUzytkownika():void
@@ -77,9 +77,9 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
--nazwaPlikuZUzytkownikami:String
+-NAZWA_PLIKU_Z_UZYTKOWNIKAMI:String
 --
-+PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI)
++PlikZUzytkownikami(string nazwaPlikuZUzytkownikami)
 -zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik):String
 -pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami):Uzytkownik
 +dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik): void
@@ -118,10 +118,10 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
--nazwaPlikuZAdresatami: const String
+-NAZWA_PLIKU_Z_ADRESATAMI: String
 -idOstatniegoAdresata: Integer
 --
-+PlikZAdresatami(string NAZWAPLIKUZADRESATAMI)
++PlikZAdresatami(string nazwaPlikuZAdresatami)
 -czyPlikJestPusty():Bool
 -zamienDaneAdresataNaLinieOddzielonePionowymiKreskami(adresat):String
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(int id ZalogowanegoUzytkownika):vector&lt;Adresat&gt;
@@ -143,7 +143,7 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
--IDZALOGOWANEGOUZYTKOWNIKA:const Integer
+-ID_ZALOGOWANEGO_UZYTKOWNIKA:Integer
 -adresaci:vector&lt;Adresat&gt;
 -PLikZAdresatami:plikZAdresatami
 --

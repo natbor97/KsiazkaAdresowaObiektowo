@@ -13,21 +13,24 @@
 
 using namespace std;
 
-class AdresatMenedzer{
-    const int IDZALOGOWANEGOUZYTKOWNIKA;
+class AdresatMenedzer {
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector<Adresat>adresaci;
     PlikZAdresatami plikZAdresatami;
 
+    Adresat podajDaneNowegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+
+
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-    : plikZAdresatami (nazwaPlikuZAdresatami), IDZALOGOWANEGOUZYTKOWNIKA (idZalogowanegoUzytkownika){
-        adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(IDZALOGOWANEGOUZYTKOWNIKA);
+        : plikZAdresatami (nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA (idZalogowanegoUzytkownika) {
+        adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
 
     void dodajAdresata();
-    Adresat podajDaneNowegoAdresata();
     void wyswietlWszystkichAdresatow();
-    void wyswietlDaneAdresata(Adresat adresat);
+
 };
 
 #endif

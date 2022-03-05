@@ -31,7 +31,6 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     int logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
     bool czyUzytkownikJestZalogowany();
     void zmianaHaslaZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku();

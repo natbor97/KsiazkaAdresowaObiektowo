@@ -15,7 +15,7 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika() {
 void KsiazkaAdresowa::logowanieUzytkownika() {
     uzytkownikMenedzer.logowanieUzytkownika();
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
-        adresatMenedzer = new AdresatMenedzer(NAZWAPLIKUZADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
     }
 };
 
@@ -30,7 +30,7 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMenedzer.wylogowanieUzytkownika();
     delete adresatMenedzer;
-    adresatMenedzer = 0;
+    adresatMenedzer = NULL;
 };
 
 void KsiazkaAdresowa::dodajAdresata(){
