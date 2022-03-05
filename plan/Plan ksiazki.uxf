@@ -15,10 +15,10 @@
 -adresatMenedzer:AdresatMenedzer
 -NAZWA_PLIKU_Z_ADRESATAMI: String
 --
-KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
++KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
 +rejestracjaUzytkownika():void
 +wypiszWszystkichUzytkownikow():void
-+int pobierzIdZalogowanegoUzytkownika();
++pobierzIdZalogowanegoUzytkownika():Integer
 +logowanieUzytkownika():void
 +czyUzytkownikJestZalogowany():Bool
 +zmianaHaslaZalogowanegoUzytkownika():void
@@ -125,11 +125,10 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
 -czyPlikJestPusty():Bool
 -zamienDaneAdresataNaLinieOddzielonePionowymiKreskami(adresat):String
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(int id ZalogowanegoUzytkownika):vector&lt;Adresat&gt;
-+pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami):int
-+pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami):int
-+pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami):Adresat
+-pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami):int
+-pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami):int
+-pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami):Adresat
 +pobierzZPlikuIdOstatniegoAdresata(): Integer
-+wczytajIdOstatniegoAdresata(int Id):void
 +dopiszAdresataDoPliku():Bool</panel_attributes>
     <additional_attributes/>
   </element>
@@ -149,9 +148,9 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
 --
 +AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
 + dodajAdresata():void
-+ podajDaneNowegoAdresata():Adresat
+- podajDaneNowegoAdresata():Adresat
 + wyswietlWszystkichAdresatow():void
-+ wyswietlDaneAdresata(Adresat adresat):void</panel_attributes>
+- wyswietlDaneAdresata(Adresat adresat):void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -175,11 +174,9 @@ KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):
 +rejestracjaUzytkownika():void
 +pobierzIdZalogowanegoUzytkownika():Integer
 +logowanieUzytkownika():Integer
-+wypiszWszystkichUzytkownikow():void
-+wczytajUzytkownikowZPliku():void 
++wypiszWszystkichUzytkownikow():void 
 +czyUzytkownikJestZalogowany(): Bool
 +zmianaHaslaZalogowanegoUzytkownika():void
-+zapiszWszystkichUzytkownikowDoPliku():void
 +wylogowanieUzytkownika():void
 
 

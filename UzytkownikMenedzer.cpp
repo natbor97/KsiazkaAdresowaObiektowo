@@ -102,13 +102,13 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
             system("pause");
         }
     }
-    zapiszWszystkichUzytkownikowDoPliku();
-}
-
-void UzytkownikMenedzer::zapiszWszystkichUzytkownikowDoPliku() {
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+/*void UzytkownikMenedzer::zapiszWszystkichUzytkownikowDoPliku() {
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+*/
 void UzytkownikMenedzer::wylogowanieUzytkownika() {
     idZalogowanegoUzytkownika = 0;
 }
