@@ -33,7 +33,6 @@ public:
     void wypiszWszystkichUzytkownikow();
     bool czyUzytkownikJestZalogowany();
     void zmianaHaslaZalogowanegoUzytkownika();
-    //void zapiszWszystkichUzytkownikowDoPliku();
     void wylogowanieUzytkownika();
 };
 
