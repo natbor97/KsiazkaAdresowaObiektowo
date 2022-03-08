@@ -1,2 +1,2 @@
-1|1|S|S|S|S|S|
-2|2|Ania|K|34|F|F|
+1|1|B|B|b|b|b|
+2|1|H|Cc|cc|cc|h|
